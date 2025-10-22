@@ -1,5 +1,5 @@
 class QueueUsingStack:
-    def __init__(self):
+    def _init_(self):
         self.s1 = []
         self.s2 = []
 
@@ -12,9 +12,9 @@ class QueueUsingStack:
                 return "Empty"
             while self.s1:
                 self.s2.append(self.s1.pop())
-        return self.s2.pop(0)  # ❌ Wrong pop index
+        return self.s2.pop()  # ✅ Pop from end of s2
 
 q = QueueUsingStack()
 q.enqueue(10)
 q.enqueue(20)
-print(q.dequeue())  # Expected 10
+print(q.dequeue())
